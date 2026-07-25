@@ -1,0 +1,18 @@
+# TechCorp Company Policies & Information Guide
+
+## 1. Product Pricing & Platforms
+Product A costs $45 and is our budget option. Product B is the premium model costing $50. Product C is the enterprise version at $150.
+Platform Z features SDKs for Python, JavaScript, and Go. Support for Rust is currently in beta. Platform Z does not support Ruby or PHP currently.
+
+## 2. Returns & Refunds
+Items returned within 30 days of purchase are eligible for a full refund. Returns between 31-60 days receive store credit. No returns accepted after 60 days.
+
+## 3. Member Baggage & Travel
+Gold status members receive two free checked bags on all domestic flights. Silver status members get one free checked bag. Bronze and non-members pay $35 per checked bag.
+
+## 4. Office Locations & Founders
+TechCorp was founded in 2015 by Sarah Jenkins. TechCorp specializes in cloud analytics. The company has offices in New York, London, and Tokyo. The New York office employs 250 people, while London has 120 and Tokyo has 80.
+
+## 5. Local Regulations & Ordinances
+State policy suggests a default speed limit of 35 mph. However, the Main Street local ordinance explicit update limits speed to 25 mph.
+Dogs are allowed in the central park area from Monday through Friday. Dogs are strictly prohibited in the park on Saturdays and Sundays.

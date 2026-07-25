@@ -1,0 +1,19 @@
+{
+    "eval_cases": [
+        {
+            "eval_case_id": "policy_qa_01",
+            "question": "How many days does a customer have to return an item for a full refund?",
+            "ground_truth": "Customers have 30 days to return an item for a full refund."
+        },
+        {
+            "eval_case_id": "policy_qa_02",
+            "question": "Is baggage fee waived for Gold members?",
+            "ground_truth": "Yes, baggage fees are waived for up to two checked bags for Gold members."
+        },
+        {
+            "eval_case_id": "conflict_resolution_01",
+            "question": "What is the speed limit on Main Street according to local regulations?",
+            "ground_truth": "The speed limit on Main Street is 25 mph according to local regulations."
+        }
+    ]
+}

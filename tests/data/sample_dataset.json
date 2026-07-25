@@ -1,0 +1,453 @@
+{
+    "eval_cases": [
+        {
+            "eval_case_id": "math_logic",
+            "question": "What is the square root of 144 plus 50?",
+            "contexts": [
+                "The square root of 144 is 12."
+            ],
+            "ground_truth": "The answer is 62."
+        },
+        {
+            "eval_case_id": "capital_fact",
+            "question": "What is the capital of France and does it have a famous iron tower?",
+            "contexts": [
+                "Paris is the capital of France.",
+                "The Eiffel Tower is a famous iron tower located in Paris."
+            ],
+            "ground_truth": "Paris is the capital of France, and it is home to the Eiffel Tower."
+        },
+        {
+            "eval_case_id": "hallucination_bait",
+            "question": "Who was the first president of the Martian Colony?",
+            "contexts": [
+                "No humans have colonised Mars yet. Exploratory missions are planned for the late 2030s."
+            ],
+            "ground_truth": "Mars has not been colonised yet, so there is no first president."
+        },
+        {
+            "eval_case_id": "math_logic_01",
+            "question": "What is 15 multiplied by 8, divided by 4?",
+            "contexts": [
+                "15 multiplied by 8 equals 120."
+            ],
+            "ground_truth": "The answer is 30."
+        },
+        {
+            "eval_case_id": "math_logic_02",
+            "question": "If John has 3 apples and buys 2 more bags with 6 apples each, how many apples does he have?",
+            "contexts": [
+                "John starts with 3 apples.",
+                "Each bag contains 6 apples."
+            ],
+            "ground_truth": "John has 15 apples."
+        },
+        {
+            "eval_case_id": "math_logic_03",
+            "question": "What is the perimeter of a rectangle with a length of 10 meters and a width of 5 meters?",
+            "contexts": [
+                "The perimeter of a rectangle is calculated as 2 * (length + width)."
+            ],
+            "ground_truth": "The perimeter is 30 meters."
+        },
+        {
+            "eval_case_id": "fact_lookup_01",
+            "question": "What is the boiling point of water at sea level in Celsius?",
+            "contexts": [
+                "At standard atmospheric pressure (sea level), water boils at 100 degrees Celsius."
+            ],
+            "ground_truth": "Water boils at 100°C at sea level."
+        },
+        {
+            "eval_case_id": "fact_lookup_02",
+            "question": "Which planet is known as the Red Planet and what is its largest volcano?",
+            "contexts": [
+                "Mars is commonly referred to as the Red Planet.",
+                "Olympus Mons is a massive shield volcano on Mars."
+            ],
+            "ground_truth": "Mars is known as the Red Planet, and its largest volcano is Olympus Mons."
+        },
+        {
+            "eval_case_id": "fact_lookup_03",
+            "question": "What element has the chemical symbol 'O' and what is its atomic number?",
+            "contexts": [
+                "Oxygen is represented by the chemical symbol O.",
+                "Oxygen has an atomic number of 8."
+            ],
+            "ground_truth": "The element is Oxygen, and its atomic number is 8."
+        },
+        {
+            "eval_case_id": "hallucination_bait_01",
+            "question": "What year was the underwater city of Atlantis officially added to the UN?",
+            "contexts": [
+                "Atlantis is a mythical island entity first mentioned in Plato's works and does not exist in reality."
+            ],
+            "ground_truth": "Atlantis is a mythical city and not a real nation, so it was never added to the UN."
+        },
+        {
+            "eval_case_id": "hallucination_bait_02",
+            "question": "Which Oscar did Leonardo DiCaprio win for his role in Titanic?",
+            "contexts": [
+                "Leonardo DiCaprio was nominated for several awards for Titanic, but he did not win an Academy Award for this performance."
+            ],
+            "ground_truth": "Leonardo DiCaprio did not win an Oscar for his role in Titanic."
+        },
+        {
+            "eval_case_id": "hallucination_bait_03",
+            "question": "What speed does time travel require according to the US Department of Physics?",
+            "contexts": [
+                "Time travel into the past remains theoretical, and there is no official US Department of Physics."
+            ],
+            "ground_truth": "There is no US Department of Physics, and actual time travel technology does not exist."
+        },
+        {
+            "eval_case_id": "conflict_resolution_01",
+            "question": "What is the speed limit on Main Street according to local regulations?",
+            "contexts": [
+                "State policy suggests a default speed limit of 35 mph.",
+                "Main Street local ordinance explicit update limits speed to 25 mph."
+            ],
+            "ground_truth": "The speed limit on Main Street is 25 mph according to local regulations."
+        },
+        {
+            "eval_case_id": "conflict_resolution_02",
+            "question": "Where was Company X founded?",
+            "contexts": [
+                "Company X was conceptualized in London in 2010.",
+                "Company X was legally incorporated and founded in Dublin in 2012."
+            ],
+            "ground_truth": "Company X was legally founded in Dublin."
+        },
+        {
+            "eval_case_id": "multi_hop_01",
+            "question": "Who is the director of the movie that featured the song 'My Heart Will Go On'?",
+            "contexts": [
+                "'My Heart Will Go On' is the main theme song for the 1997 movie Titanic.",
+                "Titanic was directed by James Cameron."
+            ],
+            "ground_truth": "The director is James Cameron."
+        },
+        {
+            "eval_case_id": "multi_hop_02",
+            "question": "What currency is used in the country where the Great Pyramid of Giza is located?",
+            "contexts": [
+                "The Great Pyramid of Giza is located in Egypt.",
+                "The official currency of Egypt is the Egyptian Pound."
+            ],
+            "ground_truth": "The currency used is the Egyptian Pound."
+        },
+        {
+            "eval_case_id": "multi_hop_03",
+            "question": "What is the capital city of the state where the Grand Canyon is located?",
+            "contexts": [
+                "The Grand Canyon is located in Arizona.",
+                "Phoenix is the capital of Arizona."
+            ],
+            "ground_truth": "The capital city is Phoenix."
+        },
+        {
+            "eval_case_id": "temporal_reasoning_01",
+            "question": "Is Alice currently eligible for a driver's license if the minimum age is 18?",
+            "contexts": [
+                "Alice was born on May 14, 2010.",
+                "The current year is 2026."
+            ],
+            "ground_truth": "Yes, Alice is 16 in 2026, so she is not yet eligible if the minimum age is 18."
+        },
+        {
+            "eval_case_id": "temporal_reasoning_02",
+            "question": "Was the Treaty of Versailles signed before or after World War II began?",
+            "contexts": [
+                "The Treaty of Versailles was signed in 1919.",
+                "World War II began in 1939."
+            ],
+            "ground_truth": "The Treaty of Versailles was signed before World War II began."
+        },
+        {
+            "eval_case_id": "unanswerable_context_01",
+            "question": "What is the founder's favorite color?",
+            "contexts": [
+                "TechCorp was founded in 2015 by Sarah Jenkins.",
+                "TechCorp specializes in cloud analytics."
+            ],
+            "ground_truth": "The provided context does not contain information about the founder's favorite color."
+        },
+        {
+            "eval_case_id": "unanswerable_context_02",
+            "question": "How many employees work at the Tokyo branch?",
+            "contexts": [
+                "The company has offices in New York, London, and Tokyo.",
+                "The New York office employs 250 people."
+            ],
+            "ground_truth": "The provided context does not specify the number of employees at the Tokyo branch."
+        },
+        {
+            "eval_case_id": "negation_handling_01",
+            "question": "Are dogs allowed in the central park area during weekends?",
+            "contexts": [
+                "Dogs are allowed in the park from Monday through Friday.",
+                "Dogs are strictly prohibited in the park on Saturdays and Sundays."
+            ],
+            "ground_truth": "No, dogs are not allowed in the central park area on weekends."
+        },
+        {
+            "eval_case_id": "negation_handling_02",
+            "question": "Does the premium plan include free cloud storage?",
+            "contexts": [
+                "The premium plan includes unlimited streaming and priority support.",
+                "Cloud storage is not included in any plan and must be purchased separately."
+            ],
+            "ground_truth": "No, the premium plan does not include free cloud storage."
+        },
+        {
+            "eval_case_id": "list_extraction_01",
+            "question": "List all primary colors mentioned in the document.",
+            "contexts": [
+                "The painter utilized red, blue, and yellow to mix secondary shades.",
+                "Green and purple were created on the palette."
+            ],
+            "ground_truth": "The primary colors mentioned are red, blue, and yellow."
+        },
+        {
+            "eval_case_id": "list_extraction_02",
+            "question": "Which programming languages are supported by Platform Z?",
+            "contexts": [
+                "Platform Z features SDKs for Python, JavaScript, and Go.",
+                "Support for Rust is currently in beta."
+            ],
+            "ground_truth": "Platform Z supports Python, JavaScript, and Go (with Rust currently in beta)."
+        },
+        {
+            "eval_case_id": "geography_01",
+            "question": "Which ocean borders the west coast of the United States?",
+            "contexts": [
+                "The Pacific Ocean is situated on the west coast of the United States."
+            ],
+            "ground_truth": "The Pacific Ocean borders the west coast of the United States."
+        },
+        {
+            "eval_case_id": "geography_02",
+            "question": "What is the largest island in the world by land area?",
+            "contexts": [
+                "Greenland is recognized as the world's largest island that is not a continent."
+            ],
+            "ground_truth": "Greenland is the largest island in the world."
+        },
+        {
+            "eval_case_id": "biology_01",
+            "question": "What organelle is known as the powerhouse of the cell?",
+            "contexts": [
+                "Mitochondria are membrane-bound cell organelles that generate most of the chemical energy needed to power the cell."
+            ],
+            "ground_truth": "The mitochondrion is known as the powerhouse of the cell."
+        },
+        {
+            "eval_case_id": "biology_02",
+            "question": "What is the primary gas absorbed by plants during photosynthesis?",
+            "contexts": [
+                "Plants absorb carbon dioxide from the atmosphere to perform photosynthesis."
+            ],
+            "ground_truth": "Plants primarily absorb carbon dioxide during photosynthesis."
+        },
+        {
+            "eval_case_id": "conditional_logic_01",
+            "question": "Will a customer get a discount if their order total is $80?",
+            "contexts": [
+                "Discounts of 10% are applied only to orders exceeding $100."
+            ],
+            "ground_truth": "No, an order of $80 does not qualify for a discount."
+        },
+        {
+            "eval_case_id": "conditional_logic_02",
+            "question": "Does Mark pass the exam if he scored 72%?",
+            "contexts": [
+                "To pass the exam, a candidate must score at least 70%."
+            ],
+            "ground_truth": "Yes, Mark passes the exam because 72% is above the 70% passing threshold."
+        },
+        {
+            "eval_case_id": "summary_extraction_01",
+            "question": "What are the main causes of soil erosion stated in the report?",
+            "contexts": [
+                "Soil erosion is primarily driven by deforestation, overgrazing, and intensive tillage agriculture."
+            ],
+            "ground_truth": "The main causes of soil erosion are deforestation, overgrazing, and intensive tillage agriculture."
+        },
+        {
+            "eval_case_id": "comparison_01",
+            "question": "Which mountain is higher, Mount Everest or K2, and by how much?",
+            "contexts": [
+                "Mount Everest stands at 8,848 meters.",
+                "K2 stands at 8,611 meters."
+            ],
+            "ground_truth": "Mount Everest is higher than K2 by 237 meters."
+        },
+        {
+            "eval_case_id": "comparison_02",
+            "question": "Which product is cheaper: Product A at $45 or Product B at $50?",
+            "contexts": [
+                "Product A costs $45.",
+                "Product B costs $50."
+            ],
+            "ground_truth": "Product A is cheaper."
+        },
+        {
+            "eval_case_id": "entity_disambiguation_01",
+            "question": "Which Jaguar is being referred to: the animal or the car brand?",
+            "contexts": [
+                "The jaguar reached a top speed of 120 mph on the test track."
+            ],
+            "ground_truth": "The context refers to the Jaguar car brand."
+        },
+        {
+            "eval_case_id": "entity_disambiguation_02",
+            "question": "Is Apple referring to the fruit or the technology company?",
+            "contexts": [
+                "Apple announced its new M3 chip during the keynote event."
+            ],
+            "ground_truth": "It refers to Apple the technology company."
+        },
+        {
+            "eval_case_id": "definition_check_01",
+            "question": "What is the definition of 'inflation' according to the text?",
+            "contexts": [
+                "Inflation refers to the general increase in prices and fall in the purchasing value of money over time."
+            ],
+            "ground_truth": "Inflation is the general increase in prices and the decrease in money's purchasing power over time."
+        },
+        {
+            "eval_case_id": "policy_qa_01",
+            "question": "How many days does a customer have to return an item for a full refund?",
+            "contexts": [
+                "Items returned within 30 days of purchase are eligible for a full refund.",
+                "Returns between 31-60 days receive store credit."
+            ],
+            "ground_truth": "Customers have 30 days to return an item for a full refund."
+        },
+        {
+            "eval_case_id": "policy_qa_02",
+            "question": "Is baggage fee waived for Gold members?",
+            "contexts": [
+                "Gold status members receive two free checked bags on all domestic flights."
+            ],
+            "ground_truth": "Yes, baggage fees are waived for up to two checked bags for Gold members."
+        },
+        {
+            "eval_case_id": "medical_fact_01",
+            "question": "What type of blood cells are responsible for fighting infections?",
+            "contexts": [
+                "White blood cells, or leukocytes, play a key role in defending the body against pathogens and infections."
+            ],
+            "ground_truth": "White blood cells (leukocytes) are responsible for fighting infections."
+        },
+        {
+            "eval_case_id": "literature_01",
+            "question": "Who wrote 'To Kill a Mockingbird' and in what year was it published?",
+            "contexts": [
+                "'To Kill a Mockingbird' is a novel by Harper Lee.",
+                "It was published in 1960."
+            ],
+            "ground_truth": "Harper Lee wrote 'To Kill a Mockingbird', published in 1960."
+        },
+        {
+            "eval_case_id": "literature_02",
+            "question": "Who is the main protagonist in Herman Melville's novel Moby-Dick?",
+            "contexts": [
+                "Ishmael is the narrator and main protagonist of Herman Melville's novel Moby-Dick."
+            ],
+            "ground_truth": "Ishmael is the main protagonist."
+        },
+        {
+            "eval_case_id": "acronym_expansion_01",
+            "question": "What does NASA stand for?",
+            "contexts": [
+                "NASA stands for National Aeronautics and Space Administration."
+            ],
+            "ground_truth": "NASA stands for National Aeronautics and Space Administration."
+        },
+        {
+            "eval_case_id": "acronym_expansion_02",
+            "question": "What does the acronym CPU stand for in computer hardware?",
+            "contexts": [
+                "CPU stands for Central Processing Unit."
+            ],
+            "ground_truth": "CPU stands for Central Processing Unit."
+        },
+        {
+            "eval_case_id": "step_by_step_01",
+            "question": "What is the second step in starting the engine according to the manual?",
+            "contexts": [
+                "Step 1: Insert key into the ignition.",
+                "Step 2: Press down the brake pedal firm.",
+                "Step 3: Turn the key clockwise."
+            ],
+            "ground_truth": "The second step is to press down the brake pedal firmly."
+        },
+        {
+            "eval_case_id": "step_by_step_02",
+            "question": "What should you do immediately after boiling water when brewing tea?",
+            "contexts": [
+                "First, boil water.",
+                "Next, pour the water over the teabag in a mug.",
+                "Finally, let it steep for 3-5 minutes."
+            ],
+            "ground_truth": "Immediately after boiling water, you should pour it over the teabag in a mug."
+        },
+        {
+            "eval_case_id": "date_formatting_01",
+            "question": "When did the Apollo 11 mission land on the moon?",
+            "contexts": [
+                "The Apollo 11 lunar module landed on the Moon on July 20, 1969."
+            ],
+            "ground_truth": "Apollo 11 landed on the moon on July 20, 1969."
+        },
+        {
+            "eval_case_id": "misleading_context_01",
+            "question": "Is the Sun a planet?",
+            "contexts": [
+                "Many people confuse astronomical bodies, but the Sun is classified as a star at the center of the Solar System."
+            ],
+            "ground_truth": "No, the Sun is a star, not a planet."
+        },
+        {
+            "eval_case_id": "quantifier_01",
+            "question": "Did all team members attend the meeting?",
+            "contexts": [
+                "Most team members attended, but Sarah and Tom were absent."
+            ],
+            "ground_truth": "No, not all team members attended; Sarah and Tom were absent."
+        },
+        {
+            "eval_case_id": "quantifier_02",
+            "question": "Are all birds capable of flight?",
+            "contexts": [
+                "While most birds fly, species like penguins and ostriches are flightless."
+            ],
+            "ground_truth": "No, not all birds can fly."
+        },
+        {
+            "eval_case_id": "unit_conversion_01",
+            "question": "How many meters are in 3 kilometers?",
+            "contexts": [
+                "1 kilometer is equal to 1,000 meters."
+            ],
+            "ground_truth": "There are 3,000 meters in 3 kilometers."
+        },
+        {
+            "eval_case_id": "cause_effect_01",
+            "question": "Why did the plant wilt according to the experiment log?",
+            "contexts": [
+                "The plant was kept in a sealed dark room without water for two weeks, causing severe dehydration and wilting."
+            ],
+            "ground_truth": "The plant wilted due to severe dehydration caused by lack of water for two weeks."
+        },
+        {
+            "eval_case_id": "role_identification_01",
+            "question": "What role does Tim Cook hold at Apple?",
+            "contexts": [
+                "Tim Cook is the Chief Executive Officer (CEO) of Apple Inc."
+            ],
+            "ground_truth": "Tim Cook is the Chief Executive Officer (CEO) of Apple Inc."
+        }
+    ]
+}
